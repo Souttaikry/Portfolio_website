@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randy Fahmi — Creative Visual Portfolio</title>
+<meta name="description" content="Graphic design, photography, videography and coding portfolio of Randy Fahmi.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#f5a623">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="topbar wrap">
+  <div class="dots"><span></span><span></span></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow-pill">Creative Visual</span>
+      <h1>Porto<br><mark>Folio</mark>.</h1>
+      <p class="lead">I'm Sout Taikry — a self-taught graphic designer & IT professional with over 2 years of experience, turning ideas into visuals and code that tell a story.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn">See my work</a>
+        <a href="#contact" class="btn ghost">Let's talk</a>
+      </div>
+    </div>
+    <div class="portrait-block">
+      <img src="images/profile.jpg" alt="Randy Fahmi">
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><h2>About</h2><div class="rule"></div></div>
+    <div class="about-grid">
+      <div class="about-photo"><div class="placeholder-icon"><img src="images/profile2.png" alt="Randy Fahmi"></div></div>
+      <div class="about-text">
+        <span class="quote-mark">"</span>
+        <h3>Hello.</h3>
+        <p>I'm Sout Taikry, a self-taught graphic designer & IT professional with over 2 years of experience. I love creating visuals that don't just look good — they tell a story. From social media content to brochures and billboards, I also explore photography, videography and code to bring ideas to life.</p>
+
+        <div class="two-col-lists">
+          <div>
+            <h4>Education</h4>
+            <div class="list-item">
+              <div class="role">Informatics Engineering</div>
+              <div class="meta">Bachelor's Degree · 2023 – 2026</div>
+            </div>
+            <h4 style="margin-top:24px;">Software Skills</h4>
+            <div class="list-item meta">Photoshop · Illustrator · Lightroom · Premiere Pro · Figma · Node.js</div>
+          </div>
+          <div>
+            <h4>Working Experience</h4>
+            <div class="list-item">
+              <div class="role">IT & Graphic Design (Freelance)</div>
+              <div class="meta">2024– Present</div>
+            </div>
+            <div class="list-item">
+              <div class="role">Graphic Design & Content Creator</div>
+              <div class="meta">2023 – 2025</div>
+            </div>
+            <div class="list-item">
+              <div class="role">UXUI Designer </div>
+              <div class="meta">2025 – 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper);">
+  <div class="wrap">
+    <div class="toc-title">
+      <span class="eyebrow-pill">What I do</span>
+      <h2>Table of Content</h2>
+    </div>
+    <div class="category-grid">
+      <button class="category-card" data-cat="graphic-design">
+        <div class="icon">🖌️</div>
+        <div class="label">Graphic Design</div>
+      </button>
+      <button class="category-card" data-cat="photography">
+        <div class="icon">📷</div>
+        <div class="label">Photographer</div>
+      </button>
+      <button class="category-card" data-cat="videography">
+        <div class="icon">🎬</div>
+        <div class="label">Videographer</div>
+      </button>
+      <button class="category-card" data-cat="coding">
+        <div class="icon">💻</div>
+        <div class="label">Coding</div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head"><h2>Selected Work</h2><div class="rule"></div></div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-chip active" data-cat="all">All</button>
+      <button class="filter-chip" data-cat="graphic-design">Graphic Design</button>
+      <button class="filter-chip" data-cat="photography">Photography</button>
+      <button class="filter-chip" data-cat="videography">Videography</button>
+      <button class="filter-chip" data-cat="coding">Coding</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <div class="empty-state">Loading projects…</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-band">
+      <div>
+        <h2>Let's work<br>together.</h2>
+      </div>
+      <div class="contact-list">
+        <span>✉️souttaikry@gmail.com</span>
+        <span>📞 +855 96 591 7084<a href="https://www.instagram.com/sout_taikry" target="_blank"></a></span>
+        <span>📸 @sout_taikry</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Sout Taikry. All rights reserved. · <a href="/admin-login.html">Admin</a>
+</footer>
+
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

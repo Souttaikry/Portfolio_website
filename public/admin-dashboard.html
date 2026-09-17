@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Admin Panel</title>
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+<div class="dash-header">
+  <div class="brand">Randy <span class="accent">Admin</span></div>
+  <div style="display:flex; align-items:center; gap:18px;">
+    <a href="/" target="_blank" style="font-size:14px;font-weight:600;">View site ↗</a>
+    <a href="#" id="logoutLink" class="logout-link">Log out</a>
+  </div>
+</div>
+
+<div class="dash-wrap">
+  <div class="dash-toolbar">
+    <h1>Projects & Images</h1>
+    <button class="add-btn" id="addBtn">+ Add new</button>
+  </div>
+
+  <div class="filter-tabs" id="filterTabs">
+    <button data-cat="all" class="active">All</button>
+    <button data-cat="graphic-design">Graphic Design</button>
+    <button data-cat="photography">Photography</button>
+    <button data-cat="videography">Videography</button>
+    <button data-cat="coding">Coding</button>
+  </div>
+
+  <div class="admin-grid" id="adminGrid">
+    <div class="empty-note">Loading…</div>
+  </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="modal-overlay hidden" id="modalOverlay">
+  <div class="modal-box">
+    <h2 id="modalTitle">Add new project</h2>
+    <form id="projectForm">
+      <input type="hidden" id="projectId">
+
+      <div class="field">
+        <label for="title">Title</label>
+        <input type="text" id="title" required>
+      </div>
+
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category" required>
+          <option value="graphic-design">Graphic Design</option>
+          <option value="photography">Photography</option>
+          <option value="videography">Videography</option>
+          <option value="coding">Coding</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea id="description" rows="3"></textarea>
+      </div>
+
+      <div id="codingFields">
+        <div class="field">
+          <label for="techStack">Tech stack (comma separated)</label>
+          <input type="text" id="techStack" placeholder="Node.js, MongoDB, Express">
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label for="repoUrl">Repo URL</label>
+            <input type="url" id="repoUrl" placeholder="https://github.com/...">
+          </div>
+          <div class="field">
+            <label for="liveUrl">Live URL</label>
+            <input type="url" id="liveUrl" placeholder="https://...">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="imageFile" id="mediaLabel">Image</label>
+        <div class="current-image" id="currentImageWrap" style="display:none;">
+          <img id="currentImage" src="">
+        </div>
+        <div class="current-image" id="currentVideoWrap" style="display:none;">
+          <video id="currentVideo" src="" controls style="max-height:120px;border-radius:10px;"></video>
+        </div>
+        <input type="file" id="imageFile" accept="image/*,video/*">
+        <div class="hint" id="mediaHint">JPG, PNG, GIF or WEBP — max 8MB. Leave empty to keep the existing file when editing.</div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn secondary" id="cancelBtn">Cancel</button>
+        <button type="submit" class="btn" id="saveBtn">Save project</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>
